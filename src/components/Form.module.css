@@ -1,0 +1,93 @@
+
+.form__container {
+    padding:4rem 1.5rem;
+}
+.inp__container {
+    margin-top:1rem;
+}
+label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:hsl(278, 68%, 11%);
+    font-size:.7rem;
+}
+.inp__container input {
+    margin-top:.5rem;
+    width:100%;
+    padding:.5rem 1rem;
+    border:1px solid hsl(270, 3%, 87%);
+    border-radius:10px;
+}
+.dates__label{
+    position:relative;
+}
+.dates__label::before {
+    content:"(mm/yy)";
+    font-size:.7rem;
+    position:absolute;
+    left:4.5rem;
+    top:0;
+}
+.dates__label::after {
+    content:"cvc";
+    font-size:.7rem;
+    position:absolute;
+    left:9.5rem;
+    top:0;
+}
+.inp__dates {
+    display:flex;
+    gap:.5rem;
+}
+.inp__dates input:last-child {
+    flex: 1 1 300%;
+}
+
+.confirm__btn {
+    width:100%;
+    padding:.9rem;
+    margin-top:2rem;
+    color:#FFFFFF;
+    border:none;
+    border-radius:10px;
+    background:hsl(278, 68%, 11%);
+    cursor:pointer;
+}
+.confirm__btn:hover {
+    opacity:0.5;
+}
+.confirm__btn:disabled {
+    opacity:0.2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+::placeholder {
+    color:hsl(270, 3%, 87%);
+    opacity:1;
+}
+
+@media(min-width:600px) {
+    .form__container {
+        max-width:600px;
+        margin:10% auto;
+    }
+    .inp__container {
+        margin-top:1rem;
+    }
+}
+@media(min-width:1000px) {
+    .form__container {
+        max-width:500px;
+    }
+    .inp__container {
+        margin-top:1rem;
+    }
+}

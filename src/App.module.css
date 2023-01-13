@@ -1,0 +1,64 @@
+
+.background__top {
+    padding:2rem 1rem .5rem 4rem;
+    background: url("./images/bg-main-mobile.png") no-repeat;
+    background-size: cover;
+    position:relative;
+}
+img {
+    /*max-width:100%;*/
+}
+.card__back {
+    background: url("./images/bg-card-back.png") no-repeat ;
+    background-size:contain;
+    padding:5rem;
+    position:relative;
+    max-width:280px;
+}
+.card__back__desktop {
+    display:none;
+}
+.card__back_numbers {
+    /*position:absolute;*/
+    /*top:69px;*/
+    /*left:225px;*/
+    font-size:.6rem;
+    color:hsl(270, 3%, 87%);
+    letter-spacing: 1px;
+    margin-left:19rem;
+    margin-top:10px;
+}
+
+@media (min-width:600px) {
+    .card__back {
+        background: url("./images/bg-card-back.png") no-repeat center;
+        background-size:contain;
+        padding:5rem;
+        position:relative;
+        margin:0 auto;
+    }
+}
+
+@media (min-width:1000px) {
+    .background__top {
+        padding:2rem 1rem .5rem 4rem;
+        background: url("./images/bg-main-desktop.png") no-repeat;
+        background-size: cover;
+        height:100vh;
+        width:30vw;
+    }
+    .container {
+        display:flex;
+        justify-content: space-between;
+    }
+    .form__desktop__flex {
+        align-self: center;
+        margin:0 auto;
+    }
+    .card__back {
+        display:none;
+    }
+    .card__back__desktop {
+        display:block;
+    }
+}

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import classes from "./App.module.css";
+import "./assets/style.css";
+import Form from "./components/Form";
+import Card from "./components/Card";
+import BackCard from "./components/BackCard";
+import {useState} from "react";
 
 function App() {
+
+    const [data, setData] = useState(
+        {name: "", cardNumber:0, dateMM: 0, dateYY: 0, cvc: 0}
+    )
+
+    const receiveDataHandler = (data) => {
+        setData(data);
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <div className={classes.background__top}>
+          <div className={classes.card__back}></div>
+          <Card data={data}/>
+          <div className={classes.card__back__desktop}>
+          <BackCard cvc={data.cvc}/>
+          </div>
+      </div>
+    <section className={classes.form__desktop__flex}>
+        <Form onReceive={receiveDataHandler}/>
+    </section>
     </div>
   );
 }

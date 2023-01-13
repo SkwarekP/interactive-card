@@ -1,0 +1,31 @@
+.backcard__container {
+    background:lightgrey;
+    padding:1.25rem 0 3rem 0;
+    border-radius:10px;
+    min-width:400px;
+    max-width:100%;
+    width:400px;
+    position:absolute;
+    top:53%;
+    left:110%;
+    transform:translateX(-70%);
+}
+
+.backcard__border {
+    background: black;
+    padding:1.5rem 0;
+}
+
+.backcard__light_border {
+    background:gray;
+    padding:.6rem 2rem;
+    border-radius:5px;
+    width:80%;
+    margin:1.5rem auto;
+    display:flex;
+    justify-content: flex-end;
+}
+.backcard__light_border span {
+    font-size:0.8rem;
+    color:hsl(270, 3%, 87%);
+}
