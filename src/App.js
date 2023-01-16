@@ -41,7 +41,7 @@ function App() {
         {isSubmitted ? <CardSubmittedInfo onContinue={continueSubmitHandler}/> : <Form onReceive={receiveDataHandler}/>}
     </section>
         <div className={classes.attribution}>
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
             Coded by <a href="https://www.frontendmentor.io/profile/SkwarekP">Patryk Skwara</a>.
         </div>
     </div>

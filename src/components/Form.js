@@ -189,7 +189,7 @@ const cvcLimit = 3;
             isCancelled = true;
         }
 
-    }, [nameState.name, cardNumberState.cardNumber, dateMMState.dateMM, dateYYState.dateYY, cvcState.cvc, isSubmitted])
+    }, [nameState.name, cardNumberState.cardNumber, dateMMState.dateMM, dateYYState.dateYY, cvcState.cvc, isSubmitted, props])
 
 
     const submitFormHandler = (e) => {
