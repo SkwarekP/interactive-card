@@ -40,7 +40,12 @@ function App() {
     <section className={classes.form__desktop__flex}>
         {isSubmitted ? <CardSubmittedInfo onContinue={continueSubmitHandler}/> : <Form onReceive={receiveDataHandler}/>}
     </section>
+        <div className={classes.attribution}>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://www.frontendmentor.io/profile/SkwarekP">Patryk Skwara</a>.
+        </div>
     </div>
+
   );
 }
 
