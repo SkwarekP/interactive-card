@@ -15,18 +15,17 @@ img {
     position:relative;
     max-width:280px;
 }
+
 .card__back__desktop {
     display:none;
 }
-.card__back_numbers {
-    /*position:absolute;*/
-    /*top:69px;*/
-    /*left:225px;*/
+.card__back__numbers {
+    position:absolute;
+    top:69px;
+    left:225px;
     font-size:.6rem;
     color:hsl(270, 3%, 87%);
     letter-spacing: 1px;
-    margin-left:19rem;
-    margin-top:10px;
 }
 
 @media (min-width:600px) {
@@ -36,6 +35,9 @@ img {
         padding:5rem;
         position:relative;
         margin:0 auto;
+    }
+    .card__back__numbers {
+        top:80px;
     }
 }
 

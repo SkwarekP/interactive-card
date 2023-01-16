@@ -16,7 +16,7 @@ label {
     width:100%;
     padding:.5rem 1rem;
     border:1px solid hsl(270, 3%, 87%);
-    border-radius:10px;
+    border-radius:8px;
 }
 .dates__label{
     position:relative;
@@ -25,22 +25,36 @@ label {
     content:"(mm/yy)";
     font-size:.7rem;
     position:absolute;
-    left:4.5rem;
+    left:5.2rem;
     top:0;
 }
 .dates__label::after {
     content:"cvc";
     font-size:.7rem;
     position:absolute;
-    left:9.5rem;
+    left:10.5rem;
     top:0;
 }
 .inp__dates {
     display:flex;
     gap:.5rem;
 }
+.inp__dates input:first-child {
+    width:75px;
+}
+.inp__dates input:nth-child(2) {
+    width:75px;
+}
 .inp__dates input:last-child {
-    flex: 1 1 300%;
+    flex-grow:1;
+}
+.onFocus {
+    border:1px solid purple !important;
+    outline:none;
+    /*background: purple;*/
+}
+.onError {
+    border:1px solid red !important;
 }
 
 .confirm__btn {
@@ -56,8 +70,13 @@ label {
 .confirm__btn:hover {
     opacity:0.5;
 }
-.confirm__btn:disabled {
-    opacity:0.2;
+.invalid__message_container {
+    display:flex;
+    gap:1rem;
+}
+.invalid__message {
+    font-size:.75rem;
+    color:red;
 }
 
 input::-webkit-outer-spin-button,
@@ -82,6 +101,23 @@ input[type=number] {
     .inp__container {
         margin-top:1rem;
     }
+    .dates__label{
+        position:relative;
+    }
+    .dates__label::before {
+        content:"(mm/yy)";
+        font-size:.7rem;
+        position:absolute;
+        left:5rem;
+        top:0;
+    }
+    .dates__label::after {
+        content:"cvc";
+        font-size:.7rem;
+        position:absolute;
+        left:10.5rem;
+        top:0;
+    }
 }
 @media(min-width:1000px) {
     .form__container {
@@ -89,5 +125,19 @@ input[type=number] {
     }
     .inp__container {
         margin-top:1rem;
+    }
+    .dates__label::before {
+        content:"(mm/yy)";
+        font-size:.7rem;
+        position:absolute;
+        left:5rem;
+        top:0;
+    }
+    .dates__label::after {
+        content:"cvc";
+        font-size:.7rem;
+        position:absolute;
+        left:10.5rem;
+        top:0;
     }
 }

@@ -3,6 +3,7 @@ import "./assets/style.css";
 import Form from "./components/Form";
 import Card from "./components/Card";
 import BackCard from "./components/BackCard";
+import CardSubmittedInfo from "./components/CardSubmittedInfo";
 import {useState} from "react";
 
 function App() {
@@ -10,21 +11,34 @@ function App() {
     const [data, setData] = useState(
         {name: "", cardNumber:0, dateMM: 0, dateYY: 0, cvc: 0}
     )
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const receiveDataHandler = (data) => {
-        setData(data);
+    const receiveDataHandler = (dataReceived, flag) => {
+        setData(dataReceived);
+        if(flag) {
+            setIsSubmitted(true);
+        }
     }
+
+    const continueSubmitHandler = (flag) => {
+        setIsSubmitted(flag)
+    }
+
   return (
     <div className={classes.container}>
       <div className={classes.background__top}>
-          <div className={classes.card__back}></div>
+          <div className={classes.card__back}>
+              {data.cvc === 0 || data.cvc === "" ?
+                  <span className={classes.card__back__numbers}>000</span> :
+                  <span className={classes.card__back__numbers}>{data.cvc}</span>}
+          </div>
           <Card data={data}/>
           <div className={classes.card__back__desktop}>
           <BackCard cvc={data.cvc}/>
           </div>
       </div>
     <section className={classes.form__desktop__flex}>
-        <Form onReceive={receiveDataHandler}/>
+        {isSubmitted ? <CardSubmittedInfo onContinue={continueSubmitHandler}/> : <Form onReceive={receiveDataHandler}/>}
     </section>
     </div>
   );

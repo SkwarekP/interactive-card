@@ -9,7 +9,8 @@ function Card(props) {
             </div>
             <div className={classes.card__number}>
                 {/*<span>0000 0000 0000 0000</span>*/}
-                {props.data.cardNumber === 0 || props.data.cardNumber === "" || props.data.cardNumber === undefined ? <span>0000 0000 0000 0000</span> : props.data.cardNumber}
+                {props.data.cardNumber === 0 || props.data.cardNumber === "" || props.data.cardNumber === undefined ?
+                    <span>0000 0000 0000 0000</span> : <span>{props.data.cardNumber}</span>}
             </div>
             <div className={classes.flex__names_exp_date}>
                 {props.data.name === "" || props.data.name === undefined? <span>Jane Applessed</span> : <span>{props.data.name}</span>}
