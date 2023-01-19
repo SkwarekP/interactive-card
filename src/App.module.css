@@ -28,8 +28,7 @@ img {
     letter-spacing: 1px;
 }
 
-.attribution { font-size: 11px; text-align: center; position: absolute; bottom:0; left:50%; width:100%; transform:translateX(-50%) }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { display:none;}
 @media (min-width:600px) {
     .card__back {
         background: url("./images/bg-card-back.png") no-repeat center;
@@ -65,4 +64,6 @@ img {
     .card__back__desktop {
         display:block;
     }
+    .attribution { font-size: 11px; text-align: center; position: absolute; bottom:0; left:50%; width:100%; transform:translateX(-50%); display:block;}
+.attribution a { color: hsl(228, 45%, 44%); }
 }
